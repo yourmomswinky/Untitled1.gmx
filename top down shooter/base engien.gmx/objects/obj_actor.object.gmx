@@ -278,7 +278,7 @@ draw_text(10, 100, actorScript);
           <argument>
             <kind>1</kind>
             <string>/// draw blood if requested
-
+//gay
 if drawBlood = true{
     draw_set_blend_mode(bm_normal);
     bloodEmitter = part_emitter_create(blood);
