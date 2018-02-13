@@ -1,12 +1,7 @@
 // needs correcting for pedestrian
 
 if dead = false{
-
-<<<<<<< HEAD
-speed = 2.5
-=======
 speed = 50;
->>>>>>> origin/master
     
 if collision_line(x, y, x + lengthdir_x(64, direction), y + lengthdir_y(64, direction), obj_car, false, true){
     if speed > 0{
