@@ -59,7 +59,7 @@ randomize();
             <kind>1</kind>
             <string>// needs correcting for pedestrian
 
-speed = 2.5;
+speed = 9;
     
 if collision_line(x, y, x + lengthdir_x(64, direction), y + lengthdir_y(64, direction), obj_car, false, true){
     if speed &gt; 0{
