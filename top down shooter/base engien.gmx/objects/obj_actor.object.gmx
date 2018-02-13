@@ -315,13 +315,13 @@ if bloodPool = true{
 // determine weather or not the particles should
 // be drawn
 
+draw_self();
+
 if obj_player.floorNumber = floorNumber{
     if part_system_exists(blood){
         part_system_drawit(blood);
         }
     }
-    
-draw_self();
 </string>
           </argument>
         </arguments>

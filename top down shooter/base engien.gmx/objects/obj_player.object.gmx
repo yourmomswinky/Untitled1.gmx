@@ -747,6 +747,7 @@ if global.cutscene = true{
           <argument>
             <kind>1</kind>
             <string>/// dabbing
+// type 69 to dab
 
 if keyboard_check_pressed(vk_anykey){
     if keyboard_check_pressed(ord("6")){
