@@ -322,6 +322,8 @@ if obj_player.floorNumber = floorNumber{
     }
     
 draw_self();
+
+// testing giithoob
 </string>
           </argument>
         </arguments>
