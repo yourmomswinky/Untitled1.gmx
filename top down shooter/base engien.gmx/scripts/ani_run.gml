@@ -32,3 +32,6 @@ if frame < 10{
     
 tskArmRightOneX *= -1;
 tskArmRightTwoX = tskArmRightOneX*4;
+
+//holding weapons
+//sk_cap_arms();

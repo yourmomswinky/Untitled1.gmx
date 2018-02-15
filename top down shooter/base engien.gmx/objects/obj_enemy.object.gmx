@@ -248,10 +248,9 @@ if gCover = true{
     // create the path
     
     mp_grid_path(global.grid, path, x, y, target.x, target.y, false){
-    path_start(path, 5, path_action_stop, false);
+        path_start(path, 5, path_action_stop, false);
         
-    
-    }
+        }
     
     gCover = false;
     }

@@ -24,6 +24,7 @@
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_null</sprite>
+    <sprite>sprites\spr_transparent</sprite>
     <sprite>sprites\spr_null_dir</sprite>
     <sprites name="placeholder">
       <sprite>sprites\spr_player</sprite>
@@ -53,7 +54,9 @@
     <sprites name="market stalls">
       <sprite>sprites\spr_camden_stall</sprite>
     </sprites>
-    <sprite>sprites\spr_transparent</sprite>
+    <sprites name="weapons">
+      <sprite>sprites\spr_pistol</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\tls_solids</background>
@@ -119,9 +122,11 @@
       <script>scripts\cutscene_bank_init.gml</script>
     </scripts>
     <scripts name="animations">
+      <script>scripts\sk_cap_arms.gml</script>
       <script>scripts\ani_walk.gml</script>
       <script>scripts\ani_run.gml</script>
       <script>scripts\ani_dab.gml</script>
+      <script>scripts\ani_aim.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
@@ -146,6 +151,7 @@
       <object>objects\obj_enemy</object>
       <object>objects\obj_traffic_turn</object>
       <object>objects\obj_walk_marker</object>
+      <object>objects\obj_wander_marker</object>
     </objects>
     <objects name="building objects">
       <object>objects\obj_chair</object>

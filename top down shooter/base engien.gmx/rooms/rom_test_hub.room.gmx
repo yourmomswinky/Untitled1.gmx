@@ -721,6 +721,8 @@ global.shadowQuality = 1;</code>
     <instance objName="obj_solid" x="672" y="672" name="inst_75B8A5DE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_solid" x="2720" y="1312" name="inst_2D81EA06" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_solid" x="3616" y="4896" name="inst_0C0E2EF4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wander_marker" x="6560" y="3840" name="inst_1FC6AAF8" locked="0" code="" scaleX="9" scaleY="10" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wander_marker" x="4512" y="3712" name="inst_14597DCA" locked="0" code="" scaleX="27" scaleY="14" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="tls_backgrounds" x="2752" y="4224" w="128" h="128" xo="0" yo="256" id="10006898" name="inst_9FBCC89A" depth="10001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

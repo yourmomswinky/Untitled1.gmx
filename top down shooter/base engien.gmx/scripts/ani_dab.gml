@@ -10,3 +10,4 @@ tskArmRightOneX = 15;//+frame*0.4;
 tskArmRightOneY = 15+frame;
 tskArmRightTwoX = 30;
 tskArmRightTwoY = 0+frame*2;
+//sk_cap_arms();

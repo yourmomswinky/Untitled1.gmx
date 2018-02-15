@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>/// declare actor unspecific variables
-
+path = path_add();
 
 target = instance_nearest(x, y, obj_walk_marker);
 lastTarget = "none";
@@ -55,6 +55,11 @@ poolMaxSize = 2;
 // floor variables
 
 active = true;
+
+partAlpha = 1;
+wander = false;
+foundTarget = false;
+path = 0;
 </string>
           </argument>
         </arguments>
@@ -197,6 +202,8 @@ drawBlood = true;
 // draw blood to the wall ajacent to the shot
 pX = other.parent.x;
 pY = other.parent.y;
+
+partAlpha = 1;
 </string>
           </argument>
         </arguments>
@@ -283,10 +290,11 @@ if drawBlood = true{
     draw_set_blend_mode(bm_normal);
     bloodEmitter = part_emitter_create(blood);
     bloodType = part_type_create();
+    part_type_alpha2(bloodType, 1, 0);
     part_system_automatic_draw(blood, false);
     part_type_blend(bloodType, bm_normal);
     part_type_shape(bloodType, pt_shape_disk);
-    part_type_life(bloodType, 1000000, 1000000);
+    part_type_life(bloodType, 180, 180);
     part_type_size(bloodType, bloodMinSize, bloodMaxSize, 0, 0);
     part_type_colour_rgb(bloodType, 130, 150, 6, 10, 6, 10);
     part_emitter_region(blood, bloodEmitter, x - 50, x + 50, y + 50, y - 50, ps_shape_ellipse, ps_distr_gaussian);
@@ -318,12 +326,41 @@ if bloodPool = true{
 if obj_player.floorNumber = floorNumber{
     if part_system_exists(blood){
         part_system_drawit(blood);
+        
         }
     }
     
 draw_self();
 
 // testing giithoob
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// debugging
+
+if foundTarget{
+    draw_set_colour(c_blue);
+    draw_circle(targetX, targetY, 5, false);
+    draw_set_colour(c_black);
+    
+    }
 </string>
           </argument>
         </arguments>
