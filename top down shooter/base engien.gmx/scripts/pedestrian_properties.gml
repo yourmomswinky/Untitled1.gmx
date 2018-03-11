@@ -1,5 +1,10 @@
 // needs correcting for pedestrian
 
+if collision_point(x, y, obj_building_marker, false, true){
+    building_object();
+    
+    }
+
 if dead = false{
     if !wander{
         speed = 2.5;

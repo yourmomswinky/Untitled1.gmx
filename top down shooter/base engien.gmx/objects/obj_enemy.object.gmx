@@ -65,6 +65,18 @@ firePause = 30;
 mp_potential_settings(360, 90, 20, true);
 
 path = path_add();
+
+alert = true;
+patrolPath = "none";
+patrolSpeed = 2;
+patrolEnd = path_action_stop;
+
+visionConeAngle = 45; 
+visionConeRange = 500;
+colTrue = true;
+    
+xprevious2 = x;
+yprevious2 = y;
 </string>
           </argument>
         </arguments>
@@ -116,41 +128,41 @@ part_emitter_burst(global.blood, bloodEmitter, pool, 1)
 // calculate the sway and then direction
 
 
-
-if  floorNumber = obj_player.floorNumber and dead = false
-    {
-    if collision_line(x, y, obj_player.x, obj_player.y, obj_solid, false, true) = noone{
-        colTrue = true
-        colList = collision_line_list(x, y, obj_player.x, obj_player.y, obj_solid, false, true);
-        
-        for (i = 0; i &lt; array_length_1d(colList); i += 1){
-            if colList[i].visible = true{
-                colTrue = true;
+if alert = true{
+    if  floorNumber = obj_player.floorNumber and dead = false
+        {
+        if collision_line(x, y, obj_player.x, obj_player.y, obj_solid, false, true) = noone{
+            colTrue = true
+            colList = collision_line_list(x, y, obj_player.x, obj_player.y, obj_solid, false, true);
+            
+            for (i = 0; i &lt; array_length_1d(colList); i += 1){
+                if colList[i].visible = true{
+                    colTrue = true;
+                    
+                    }
                 
                 }
-            
-            }
-    
-        if colTrue{
-            wSway = random_range(-swayRange, swayRange);
-            wDirection = point_direction(x, y, obj_player.x, obj_player.y);
-            wDirection += wSway;
-            
-            // create the bullet and set its variables
-            // if the enemy still has a shot on the player
-            
-            with(instance_create(x, y, obj_bullet)){
-                parent = other;
-                speed = 64;
-                direction = parent.wDirection;
-                    
+        
+            if colTrue{
+                wSway = random_range(-swayRange, swayRange);
+                wDirection = point_direction(x, y, obj_player.x, obj_player.y);
+                wDirection += wSway;
+                
+                // create the bullet and set its variables
+                // if the enemy still has a shot on the player
+                
+                with(instance_create(x, y, obj_bullet)){
+                    parent = other;
+                    speed = 64;
+                    direction = parent.wDirection;
+                        
+                    }
                 }
             }
+    
         }
-
-    }
-
-alarm[0] = 30;
+    }    
+    alarm[0] = 30;
 </string>
           </argument>
         </arguments>
@@ -207,74 +219,148 @@ if dead = true and speed = 0 and bloodDry = false{
           <argument>
             <kind>1</kind>
             <string>/// enemy AI movement
-
-if dead = false and active = true{
-
-// detect whether or not it is a good idea
-// to get into cover
-
-if gCover = false and !collision_line(x, y, obj_player.x, obj_player.y, obj_solid, false, true)
-and !collision_line(target.x, target.y, obj_player.x, obj_player.y, obj_solid, false, true){
-    gCover = true;
-    if target != obj_player{
-        target.used = false;
+if alert{
+    if dead = false and active = true{
+    
+    // detect whether or not it is a good idea
+    // to get into cover
+    
+    if gCover = false and !collision_line(x, y, obj_player.x, obj_player.y, obj_solid, false, true)
+    and !collision_line(target.x, target.y, obj_player.x, obj_player.y, obj_solid, false, true){
+        gCover = true;
+        if target != obj_player{
+            target.used = false;
+            }
         }
-    }
-    
-if gCover = true{
-    // find good cover
-    found = false;
-    i = 1;
-    
-    while found = false{
-        poTarget = instance_nth_nearest(x, y, obj_cover_indicator, i);
-        if poTarget.used = false{
-            if collision_line(poTarget.x, poTarget.y, obj_player.x, obj_player.y, obj_solid, false, true){
-                target = poTarget;
-                found = true;
-                poTarget.used = true;
-                
-                }else{
-                i += 1;
+        
+    if gCover = true{
+        // find good cover
+        found = false;
+        i = 1;
+        
+        while found = false{
+            poTarget = instance_nth_nearest(x, y, obj_cover_indicator, i);
+            if poTarget.used = false{
+                if collision_line(poTarget.x, poTarget.y, obj_player.x, obj_player.y, obj_solid, false, true){
+                    target = poTarget;
+                    found = true;
+                    poTarget.used = true;
                     
+                    }else{
+                    i += 1;
+                        
+                    }
+                }else{
+                i += 1
                 }
-            }else{
-            i += 1
+            
+            gCover = false;
+            }
+        
+        // create the path
+        
+        mp_grid_path(global.grid, path, x, y, target.x, target.y, false){
+            path_start(path, 5, path_action_stop, false);
+            
             }
         
         gCover = false;
         }
-    
-    // create the path
-    
-    mp_grid_path(global.grid, path, x, y, target.x, target.y, false){
-        path_start(path, 5, path_action_stop, false);
         
-        }
+    /* shooting
+    sway = random_range(-swayRange, swayRange);
     
-    gCover = false;
-    }
-    
-/* shooting
-sway = random_range(-swayRange, swayRange);
-
-if !(collision_line(x, y, obj_player.x, obj_player.y, obj_solid, true, true)){
-    if ready = true{
-        with(instance_create(x, y, obj_bullet)){
-            parent = obj_enemy;
-            direction = point_direction(parent.x, parent.y, obj_player.x, obj_player.y) + other.sway;
-            speed = 64 ;
+    if !(collision_line(x, y, obj_player.x, obj_player.y, obj_solid, true, true)){
+        if ready = true{
+            with(instance_create(x, y, obj_bullet)){
+                parent = obj_enemy;
+                direction = point_direction(parent.x, parent.y, obj_player.x, obj_player.y) + other.sway;
+                speed = 64 ;
+                
+                }
+            ready = false;
+            alarm[0] = 60;
             
             }
-        ready = false;
-        alarm[0] = 60;
         
         }
+    */}else{
+        path_end();
+        }
+    }
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Enemy AI Guard Patrols
+// to be ran when the enemy is on patrol in a stealth mission
+
+// NEED TO ADD VISION !CONE!
+
+if alert = false{
+    var calculatedDirection = 180 + point_direction(x, y, xprevious2, yprevious2);
+    
+    image_angle = calculatedDirection;
+    
+    if path_index = -1{
+        path_start(patrolPath, patrolSpeed, patrolEnd, false);
+        
+        }
+        
+    if point_direction(x, y, obj_player.x, obj_player.y) &gt; calculatedDirection - visionConeAngle    // does not work because of
+    and point_direction(x, y, obj_player.x, obj_player.y) &lt; calculatedDirection + visionConeAngle   // angle system
+    {
+    
+        if point_distance(x, y, obj_player.x, obj_player.y) &lt; visionConeRange{
+            if  floorNumber = obj_player.floorNumber and dead = false{
+                if collision_line(x, y, obj_player.x, obj_player.y, obj_solid, false, true) != noone{
+                    colTrue = true
+                    var colList = collision_line_list(x, y, obj_player.x, obj_player.y, obj_solid, false, true);
+                
+                    for (i = 0; i &lt; array_length_1d(colList); i += 1){
+                        if colList[i].visible = true{
+                            colTrue = true;
+                            
+                            }
+                            
+                        if !colTrue{
+                            alert = true;
+                            path_end();
+                            
+                            }
+                        
+                        }
+                    }else{
+                    alert = true;
+                    path_end();
+                    
+                    }
+                }
+            }
+        
+        }
+    // scan for the player
     
     }
-*/}else{
-    path_end();
-    }
+    
+xprevious2 = x;
+yprevious2 = y;
 </string>
           </argument>
         </arguments>
@@ -395,26 +481,31 @@ if dead = false{
 
 if !(other.parent = obj_enemy)
 {
-
-/// kill the enemy and throw him back
-if dead = false{
-    dead = true;
-    global.aliveEnemies -= 1;
     
-    }
-
-direction = other.direction;
-speed = 30;
-
-// request blood to be drawn at this spot
-drawBlood = true;
-bloodDir = obj_player.aim;
-
-// draw blood to the wall ajacent to the shot
-pX = other.parent.x;
-pY = other.parent.y;
+    /// kill the enemy and throw him back
+    if dead = false{
+        dead = true;
+        global.aliveEnemies -= 1;
+        
+        }
+    
+    direction = other.direction;
+    speed = 30;
+    
+    // request blood to be drawn at this spot
+    drawBlood = true;
+    bloodDir = obj_player.aim;
+    
+    // draw blood to the wall ajacent to the shot
+    pX = other.parent.x;
+    pY = other.parent.y;
 
 }
+
+if path_index != -1{
+    path_end();
+    
+    }
 </string>
           </argument>
         </arguments>

@@ -61,9 +61,29 @@ for(i = 0; i < 5; i += 1){
         }
     
     }
-    
+
 for(i = 0; i < 5; i += 1){
     allObjectsStationCamden[array_length_1d(allObjectsStationCamden)] = instance_create(3392 + 128*i, 384, obj_escalator);
+    with allObjectsStationCamden[array_length_1d(allObjectsStationCamden) - 1]{
+        floorNumber = 1;
+        tDirection = "UP";
+        
+        }
+    
+    }
+
+for (i = 0; i < 11; i += 1){
+    allObjectsStationCamden[array_length_1d(allObjectsStationCamden)] = instance_create(3040, 736 - 64*i, obj_solid);
+    with allObjectsStationCamden[array_length_1d(allObjectsStationCamden) - 1]{
+        floorNumber = 1;
+        tDirection = "UP";
+        
+        }
+    
+    }
+    
+for (i = 0; i < 5; i += 1){
+    allObjectsStationCamden[array_length_1d(allObjectsStationCamden)] = instance_create(3424, 736 - 64*i, obj_solid);
     with allObjectsStationCamden[array_length_1d(allObjectsStationCamden) - 1]{
         floorNumber = 1;
         tDirection = "UP";
@@ -191,3 +211,15 @@ for(i = 0; i < 38; i += 1){
         }
     
     }
+    
+allObjectsStationCamden[array_length_1d(allObjectsStationCamden)] = instance_create(4928, 896, obj_actor);
+with allObjectsStationCamden[array_length_1d(allObjectsStationCamden) - 1]{
+    floorNumber = 0;
+    image_angle = 235;
+    actorScript = shady_guy_properties;
+    pause = 0;
+    event = 0;
+    
+    }
+
+

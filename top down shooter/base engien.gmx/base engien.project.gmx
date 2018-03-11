@@ -41,6 +41,7 @@
         <sprite>sprites\spr_wallace_arm_lower</sprite>
         <sprite>sprites\spr_wallace_arm_higher</sprite>
       </sprites>
+      <sprite>sprites\spr_bag</sprite>
     </sprites>
     <sprites name="cars">
       <sprites name="main car">
@@ -56,6 +57,7 @@
     </sprites>
     <sprites name="weapons">
       <sprite>sprites\spr_pistol</sprite>
+      <sprite>sprites\spr_submachine</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -73,6 +75,10 @@
         <path>paths\pth_cutscene_test1_brandon1</path>
       </paths>
     </paths>
+    <paths name="enemy patrols">
+      <paths name="test_stealth_mission">
+      </paths>
+    </paths>
   </paths>
   <scripts name="scripts">
     <script>scripts\light_change_scale.gml</script>
@@ -86,9 +92,13 @@
     <script>scripts\instance_nth_nearest.gml</script>
     <script>scripts\draw_text_box.gml</script>
     <scripts name="actor properties">
+      <scripts name="characters">
+        <script>scripts\brandon_properties.gml</script>
+        <script>scripts\shady_guy_properties.gml</script>
+        <script>scripts\default_character_properties.gml</script>
+      </scripts>
       <script>scripts\_notes.gml</script>
       <script>scripts\enemy_properties.gml</script>
-      <script>scripts\brandon_properties.gml</script>
       <script>scripts\cutscene_actor_properties.gml</script>
       <script>scripts\pedestrian_properties.gml</script>
     </scripts>
@@ -117,6 +127,7 @@
     </scripts>
     <scripts name="missions">
       <script>scripts\test_mission.gml</script>
+      <script>scripts\test_stealth_mission.gml</script>
     </scripts>
     <scripts name="cutscenes">
       <script>scripts\cutscene_bank_init.gml</script>
@@ -126,7 +137,8 @@
       <script>scripts\ani_walk.gml</script>
       <script>scripts\ani_run.gml</script>
       <script>scripts\ani_dab.gml</script>
-      <script>scripts\ani_aim.gml</script>
+      <script>scripts\ani_one_hand_aim.gml</script>
+      <script>scripts\ani_barrel_aim.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
@@ -134,11 +146,11 @@
     <font>fonts\fnt_testing</font>
   </fonts>
   <objects name="objects">
+    <object>objects\obj_walker</object>
+    <object>objects\obj_player</object>
     <object>objects\obj_object_adder</object>
     <object>objects\obj_visual_effects</object>
-    <object>objects\obj_player</object>
     <object>objects\obj_spawner</object>
-    <object>objects\obj_walker</object>
     <object>objects\obj_street_performers</object>
     <object>objects\obj_cutscene</object>
     <object>objects\obj_solid</object>

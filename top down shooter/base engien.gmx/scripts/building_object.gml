@@ -1,7 +1,7 @@
-if active != true{
-    visible = false;
+if active{
+    visible = true;
     
     }else{
-        visible = true;
+    visible = false;
         
-        }
+    }

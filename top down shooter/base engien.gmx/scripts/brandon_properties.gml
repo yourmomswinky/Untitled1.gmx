@@ -3,8 +3,8 @@
 draw_text(x, y+10, "SC");
 
 // check the instance
-if instance = 0
-{
+//if instance = 0
+//{
 
 // assign the messages to variables
 messageOne =
@@ -51,10 +51,13 @@ if distance_to_object(obj_player) < interactionDistance{
         if event < 6{
             event += 1;
             }
-    }else{
-    // reset the cam target
-    obj_player.camTarget = obj_player;
-    }   
+        
+        }else{
+        // reset the cam target
+        obj_player.camTarget = obj_player;
+        
+        }
+    
     }
 
 
@@ -145,7 +148,7 @@ if event = 7{
 if event = 8{
     draw_text_box(10, 800, 1900, messageSeven, 10, 40);
     }
-}
+//}
 
 if event = 9{
     if obj_player.mission = test_mission and
@@ -174,6 +177,7 @@ if event = 10{
 
 if event = 11{
     obj_player.mission = "none"
+    obj_player.objectiveNumber = 1;
     obj_player.objective = "none"
     event = 0;
     obj_player.track = "none";

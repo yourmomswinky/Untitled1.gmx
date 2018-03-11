@@ -690,7 +690,7 @@ window_set_cursor(cr_none);</code>
     <instance objName="obj_walk_marker" x="2688" y="1856" name="inst_90D6CE1C" locked="0" code="UP = false;&#xA;DOWN = false;&#xA;LEFT = true;&#xA;RIGHT = false;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_walk_marker" x="2176" y="1856" name="inst_68B7FF7D" locked="0" code="UP = false;&#xA;DOWN = true;&#xA;LEFT = true;&#xA;RIGHT = true;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_spawner" x="1280" y="64" name="inst_84EB6A0D" locked="0" code="object = obj_actor;&#xA;delay = 30;&#xA;count = 50;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_player" x="3264" y="1888" name="inst_2AEE7237" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_player" x="2496" y="4992" name="inst_2AEE7237" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_street_performers" x="1408" y="2496" name="inst_A11A7C90" locked="0" code="image_angle = 225;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="225"/>
     <instance objName="obj_walk_marker" x="2688" y="5344" name="inst_CEBA0B59" locked="0" code="UP = true;&#xA;DOWN = false;&#xA;LEFT = true;&#xA;RIGHT = true;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_walk_marker" x="2176" y="5344" name="inst_88257416" locked="0" code="UP = true;&#xA;DOWN = false;&#xA;LEFT = false;&#xA;RIGHT = true;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -713,6 +713,7 @@ window_set_cursor(cr_none);</code>
     <instance objName="obj_walk_marker" x="5120" y="2368" name="inst_5BE7FA8C" locked="0" code="UP = false;&#xA;DOWN = true;&#xA;LEFT = true;&#xA;RIGHT = false;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_walk_marker" x="3904" y="2368" name="inst_2902DEDB" locked="0" code="UP = false;&#xA;DOWN = false;&#xA;LEFT = true;&#xA;RIGHT = true;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_walk_marker" x="3712" y="6656" name="inst_A2405774" locked="0" code="UP = false;&#xA;DOWN = false;&#xA;LEFT = true;&#xA;RIGHT = true;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_cutscene" x="2720" y="5024" name="inst_04E12427" locked="0" code="cutscene = cutscene_test_bank;&#xA;" scaleX="1" scaleY="3.25" colour="4294967295" rotation="0"/>
     <instance objName="obj_object_adder" x="1600" y="2048" name="inst_1FAFB027" locked="0" code="height = 3;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_building_marker" x="2048" y="960" name="inst_DDE9BD2B" locked="0" code="height = 10;&#xA;" scaleX="22" scaleY="26" colour="4294967295" rotation="0"/>
     <instance objName="obj_building_marker" x="3232" y="1280" name="inst_2228CCB9" locked="0" code="height = 2;&#xA;" scaleX="17" scaleY="16" colour="4294967295" rotation="0"/>
@@ -724,7 +725,6 @@ window_set_cursor(cr_none);</code>
     <instance objName="obj_solid" x="3616" y="4896" name="inst_0C0E2EF4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wander_marker" x="6560" y="3840" name="inst_1FC6AAF8" locked="0" code="" scaleX="9" scaleY="10" colour="4294967295" rotation="0"/>
     <instance objName="obj_wander_marker" x="4512" y="3712" name="inst_14597DCA" locked="0" code="" scaleX="27" scaleY="14" colour="4294967295" rotation="0"/>
-    <instance objName="obj_building_marker" x="4416" y="2848" name="inst_DCA6AD1C" locked="0" code="height = 3;&#xA;" scaleX="18" scaleY="13" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="tls_backgrounds" x="2752" y="4224" w="128" h="128" xo="0" yo="256" id="10006898" name="inst_9FBCC89A" depth="10001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -1507,54 +1507,6 @@ window_set_cursor(cr_none);</code>
     <tile bgName="tls_backgrounds" x="4928" y="5632" w="128" h="128" xo="128" yo="256" id="10008224" name="inst_860EC13C" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tls_backgrounds" x="5056" y="5504" w="128" h="128" xo="128" yo="256" id="10008225" name="inst_ED0861EC" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tls_backgrounds" x="5056" y="5632" w="128" h="128" xo="128" yo="256" id="10008226" name="inst_1A82523F" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tls_backgrounds" x="3904" y="2432" w="128" h="128" xo="0" yo="0" id="10008451" name="inst_11B4EFD3" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tls_backgrounds" x="4032" y="2432" w="128" h="128" xo="0" yo="0" id="10008452" name="inst_2413F47E" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tls_backgrounds" x="4160" y="2432" w="128" h="128" xo="0" yo="0" id="10008453" name="inst_8BE46EF6" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tls_backgrounds" x="4288" y="2432" w="128" h="128" xo="0" yo="0" id="10008454" name="inst_60E2BA5B" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tls_backgrounds" x="4416" y="2432" w="128" h="128" xo="0" yo="0" id="10008455" name="inst_4DEF7A00" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tls_backgrounds" x="4544" y="2432" w="128" h="128" xo="0" yo="0" id="10008456" name="inst_973B9F0A" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tls_backgrounds" x="4672" y="2432" w="128" h="128" xo="0" yo="0" id="10008457" name="inst_F39176E9" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tls_backgrounds" x="4800" y="2432" w="128" h="128" xo="0" yo="0" id="10008458" name="inst_CEBE517D" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tls_backgrounds" x="3904" y="2560" w="128" h="128" xo="0" yo="0" id="10008464" name="inst_43544556" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tls_backgrounds" x="4032" y="2560" w="128" h="128" xo="0" yo="0" id="10008465" name="inst_5B4510AA" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tls_backgrounds" x="4160" y="2560" w="128" h="128" xo="0" yo="0" id="10008466" name="inst_7A53013D" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tls_backgrounds" x="4288" y="2560" w="128" h="128" xo="0" yo="0" id="10008467" name="inst_73C99A08" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tls_backgrounds" x="4416" y="2560" w="128" h="128" xo="0" yo="0" id="10008468" name="inst_C1C1BC3D" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tls_backgrounds" x="4544" y="2560" w="128" h="128" xo="0" yo="0" id="10008469" name="inst_31D6A927" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tls_backgrounds" x="4672" y="2560" w="128" h="128" xo="0" yo="0" id="10008470" name="inst_13D0390D" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tls_backgrounds" x="4800" y="2560" w="128" h="128" xo="0" yo="0" id="10008472" name="inst_56A6A980" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tls_backgrounds" x="3904" y="2688" w="128" h="128" xo="0" yo="0" id="10008473" name="inst_66089F1C" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tls_backgrounds" x="4032" y="2688" w="128" h="128" xo="0" yo="0" id="10008474" name="inst_02866289" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tls_backgrounds" x="4160" y="2688" w="128" h="128" xo="0" yo="0" id="10008475" name="inst_7F9684CE" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tls_backgrounds" x="4288" y="2688" w="128" h="128" xo="0" yo="0" id="10008476" name="inst_64A60937" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tls_backgrounds" x="4416" y="2688" w="128" h="128" xo="0" yo="0" id="10008477" name="inst_1E0598C6" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tls_backgrounds" x="4544" y="2688" w="128" h="128" xo="0" yo="0" id="10008478" name="inst_8459C247" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tls_backgrounds" x="4672" y="2688" w="128" h="128" xo="0" yo="0" id="10008479" name="inst_B5100D84" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tls_backgrounds" x="4800" y="2688" w="128" h="128" xo="0" yo="0" id="10008480" name="inst_7394005D" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tls_backgrounds" x="3904" y="2816" w="128" h="128" xo="0" yo="0" id="10008481" name="inst_EED2B10C" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tls_backgrounds" x="4032" y="2816" w="128" h="128" xo="0" yo="0" id="10008482" name="inst_FEA8CD24" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tls_backgrounds" x="4160" y="2816" w="128" h="128" xo="0" yo="0" id="10008483" name="inst_B76574B4" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tls_backgrounds" x="4288" y="2816" w="128" h="128" xo="0" yo="0" id="10008484" name="inst_07F443ED" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tls_backgrounds" x="4416" y="2816" w="128" h="128" xo="0" yo="0" id="10008485" name="inst_0BDD79B3" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tls_backgrounds" x="4544" y="2816" w="128" h="128" xo="0" yo="0" id="10008486" name="inst_C55FB2E2" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tls_backgrounds" x="4672" y="2816" w="128" h="128" xo="0" yo="0" id="10008487" name="inst_0EE34F78" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tls_backgrounds" x="4800" y="2816" w="128" h="128" xo="0" yo="0" id="10008488" name="inst_C5521696" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tls_backgrounds" x="3904" y="2944" w="128" h="128" xo="0" yo="0" id="10008489" name="inst_E0476BE8" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tls_backgrounds" x="4032" y="2944" w="128" h="128" xo="0" yo="0" id="10008490" name="inst_C4488665" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tls_backgrounds" x="4160" y="2944" w="128" h="128" xo="0" yo="0" id="10008491" name="inst_F84B850D" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tls_backgrounds" x="4288" y="2944" w="128" h="128" xo="0" yo="0" id="10008492" name="inst_6D5FF0CB" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tls_backgrounds" x="4416" y="2944" w="128" h="128" xo="0" yo="0" id="10008493" name="inst_FFC66ABE" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tls_backgrounds" x="4544" y="2944" w="128" h="128" xo="0" yo="0" id="10008494" name="inst_96E63232" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tls_backgrounds" x="4672" y="2944" w="128" h="128" xo="0" yo="0" id="10008495" name="inst_22E721AF" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tls_backgrounds" x="4800" y="2944" w="128" h="128" xo="0" yo="0" id="10008496" name="inst_349B6D09" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tls_backgrounds" x="3904" y="3072" w="128" h="128" xo="0" yo="0" id="10008497" name="inst_D918FB88" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tls_backgrounds" x="4032" y="3072" w="128" h="128" xo="0" yo="0" id="10008498" name="inst_F88FFC18" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tls_backgrounds" x="4160" y="3072" w="128" h="128" xo="0" yo="0" id="10008499" name="inst_86AA4603" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tls_backgrounds" x="4288" y="3072" w="128" h="128" xo="0" yo="0" id="10008500" name="inst_EA571EED" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tls_backgrounds" x="4416" y="3072" w="128" h="128" xo="0" yo="0" id="10008501" name="inst_7EBD14DB" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tls_backgrounds" x="4544" y="3072" w="128" h="128" xo="0" yo="0" id="10008502" name="inst_41955A45" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tls_backgrounds" x="4672" y="3072" w="128" h="128" xo="0" yo="0" id="10008503" name="inst_770276A4" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tls_backgrounds" x="4800" y="3072" w="128" h="128" xo="0" yo="0" id="10008504" name="inst_409BF232" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tls_backgrounds" x="3072" y="128" w="128" h="128" xo="0" yo="128" id="10004936" name="inst_EDD384C3" depth="1101" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tls_backgrounds" x="3200" y="128" w="128" h="128" xo="0" yo="128" id="10004937" name="inst_86F9CBC6" depth="1101" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tls_backgrounds" x="3200" y="256" w="128" h="128" xo="0" yo="128" id="10004938" name="inst_F71A7F87" depth="1101" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

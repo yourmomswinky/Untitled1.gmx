@@ -9,7 +9,7 @@ allObjectsTwo[0] = instance_create(2656, 992, obj_door);
 with allObjectsTwo[0]{
     floorNumber = 1;
     transferTo = "UP";
-    xnPos = x - 252; ynPos = y;
+    xnPos = x - 256; ynPos = y;
     }
 
 allObjectsTwo[array_length_1d(allObjectsTwo)] = instance_create(2144, 224, obj_solid);
@@ -582,15 +582,15 @@ with allObjectsTwo[array_length_1d(allObjectsTwo) - 1]{
 allObjectsTwo[array_length_1d(allObjectsTwo)] = instance_create(2656, 864, obj_door);
 with allObjectsTwo[array_length_1d(allObjectsTwo) - 1]{
     floorNumber = 2;
-    transferTo = "UP";
-    xnPos = x - 252; ynPos = y;
+    transferTo = "DOWN";
+    xnPos = x - 256; ynPos = y;
     }
 
 allObjectsTwo[array_length_1d(allObjectsTwo)] = instance_create(2656, 992, obj_door)
 with allObjectsTwo[array_length_1d(allObjectsTwo) - 1]{
     floorNumber = 2;
-    transferTo = "DOWN";
-    xnPos = x - 252; ynPos = y;
+    transferTo = "UP";
+    xnPos = x - 256; ynPos = y;
     }
     
 // lower apartment
@@ -998,7 +998,7 @@ allObjectsTwo[array_length_1d(allObjectsTwo)] = instance_create(2656, 992, obj_d
 with allObjectsTwo[array_length_1d(allObjectsTwo) - 1]{
     floorNumber = 3;
     transferTo = "DOWN";
-    xnPos = x - 252; ynPos = y;
+    xnPos = x - 256; ynPos = y;
     }
     
 // lower apartment

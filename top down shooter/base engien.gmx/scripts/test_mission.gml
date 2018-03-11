@@ -105,11 +105,18 @@ if objectiveNumber = 7{
     
     if global.aliveEnemies = 0{
         objectiveNumber = 8;
-        addedObject = instance_create(2464, 1632, obj_objective);
+        addedObject = instance_create(2944, 4672, obj_objective);
         
         with addedObject{
-            floorNumber = 1;
+            floorNumber = 2;
             active = true;
+            
+            }
+        
+        with instance_create(2720, 5024, obj_cutscene){
+            cutscene = cutscene_test_bank;
+            image_yscale = 3;
+            
             }
         
         }
