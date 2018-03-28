@@ -59,6 +59,16 @@
       <sprite>sprites\spr_pistol</sprite>
       <sprite>sprites\spr_submachine</sprite>
     </sprites>
+    <sprites name="wall textures">
+      <sprite>sprites\txtr_wall_test</sprite>
+      <sprite>sprites\txtr_roof_test</sprite>
+      <sprites name="Camden Town">
+        <sprites name="Building One">
+          <sprite>sprites\txtr_ctown_one_wall_right</sprite>
+          <sprite>sprites\txtr_ctown_one_wall_fnb</sprite>
+        </sprites>
+      </sprites>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\tls_solids</background>
@@ -77,6 +87,7 @@
     </paths>
     <paths name="enemy patrols">
       <paths name="test_stealth_mission">
+        <path>paths\pth_mission_test_stealth_patrol_one</path>
       </paths>
     </paths>
   </paths>
@@ -124,6 +135,11 @@
           <script>scripts\objects_building_six_step.gml</script>
         </scripts>
       </scripts>
+      <scripts name="fake 3D">
+        <script>scripts\f3d_draw_building_roof.gml</script>
+        <script>scripts\f3d_draw_building_walls.gml</script>
+        <script>scripts\f3d_draw_building_debug.gml</script>
+      </scripts>
     </scripts>
     <scripts name="missions">
       <script>scripts\test_mission.gml</script>
@@ -133,12 +149,15 @@
       <script>scripts\cutscene_bank_init.gml</script>
     </scripts>
     <scripts name="animations">
-      <script>scripts\sk_cap_arms.gml</script>
       <script>scripts\ani_walk.gml</script>
       <script>scripts\ani_run.gml</script>
       <script>scripts\ani_dab.gml</script>
       <script>scripts\ani_one_hand_aim.gml</script>
       <script>scripts\ani_barrel_aim.gml</script>
+    </scripts>
+    <scripts name="skeletal animations">
+      <script>scripts\sk_define_variables.gml</script>
+      <script>scripts\sk_cap_arms.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">

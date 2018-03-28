@@ -40,6 +40,11 @@ highAlphaSurf = 1;
 depth = -5;
 circleRange = 100;
 nightColour = make_colour_hsv(170, 232, 12);
+
+    leftWall = txtr_wall_test;
+    rightWall = txtr_wall_test;
+    frontWall = txtr_wall_test;
+    backWall = txtr_wall_test;
 </string>
           </argument>
         </arguments>
@@ -222,7 +227,7 @@ if timeOfDay &gt; 0.6 and timeOfDay &lt; 1.35{
             draw_set_blend_mode(bm_subtract);
             draw_set_alpha(1);
             draw_set_colour(c_black);
-            draw_rectangle(x1, y1, x2, y2, false);
+            //draw_rectangle(x1, y1, x2, y2, false);
             draw_set_blend_mode(bm_normal);
             
             }
@@ -474,6 +479,44 @@ draw_set_blend_mode(bm_normal);
 surface_reset_target();
 if obj_player.floorNumber &gt; 0 draw_surface_ext(shadowSurf, view_xview, view_yview, global.shadowQuality, global.shadowQuality, 0, c_white, 0.4 - (surfaceAlpha/0.96));
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// continued
+
+for (i = 0; i &lt; instance_number(obj_building_marker); i += 1){
+    with instance_nth_nearest(obj_player.x, obj_player.y, obj_building_marker, 
+    instance_number(obj_building_marker) - i){
+        if !place_meeting(x, y, obj_player){
+            //f3d_draw_building_debug(400, obj_player);
+            var roof = txtr_roof_test;
+            
+            f3d_draw_building_walls(height*100, obj_player,
+            leftWall, rightWall, frontWall, backWall, roof);
+            
+            f3d_draw_building_roof(height*100, obj_player,
+            leftWall, rightWall, frontWall, backWall, roof);
+            
+            }
+        }
+    }
 </string>
           </argument>
         </arguments>
